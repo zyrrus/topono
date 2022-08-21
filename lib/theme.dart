@@ -1,8 +1,9 @@
 import 'package:flutter/widgets.dart';
 
-Map theme = {
-  'fg': const Color.fromARGB(255, 237, 237, 237),
-  'body-bg': Color.fromARGB(255, 35, 35, 35),
-  'ribbon-bg': const Color.fromARGB(255, 16, 16, 16),
-  'panel-bg': const Color.fromARGB(255, 40, 40, 40),
+const Map theme = {
+  'fg': Color(0xFFEDEDED),
+  'body-bg': Color(0xFF232323),
+  'ribbon-bg': Color(0xFF101010),
+  'panel-bg': Color(0xFF282828),
+  'accent': Color.fromARGB(255, 226, 202, 135),
 };

@@ -1,30 +1,19 @@
 import 'package:flutter/widgets.dart';
+import 'package:topono/theme.dart';
 
-class GraphBackground extends StatefulWidget {
-  const GraphBackground({Key? key}) : super(key: key);
+class GraphBackground extends StatelessWidget {
+  const GraphBackground({Key? key, required this.offset}) : super(key: key);
 
-  @override
-  State<GraphBackground> createState() => GraphBackgroundState();
-}
-
-class GraphBackgroundState extends State<GraphBackground> {
-  Offset _offset = const Offset(0, 0);
+  final Offset offset;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onPanUpdate: ((details) {
-        setState(() {
-          _offset += details.delta;
-        });
-      }),
-      child: SizedBox(
-        width: double.infinity,
-        height: double.infinity,
-        child: Container(
-          color: const Color(0xFF232323),
-          child: _GridBackground(offset: _offset),
-        ),
+    return SizedBox(
+      width: double.infinity,
+      height: double.infinity,
+      child: Container(
+        color: theme['body-bg'],
+        child: _GridBackground(offset: offset),
       ),
     );
   }
